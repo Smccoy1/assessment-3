@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import SubmitTask from './components/SubmitTask';
+import TaskList from './components/Task';
 
 import './App.css';
 
@@ -7,6 +8,14 @@ import { selectTaskList } from './state/taskList/taskListSlice';
 
 function App() {
   const taskListArr = useSelector(selectTaskList);
+  // const ToDoList = ({ taskListArr }) => (
+  //   <ul>
+  //     { taskListArr.map(el => (
+  //       <li key={el.id}>{el.description}</li>
+  //     ))}
+  //   </ul>
+  //  );
+
   console.log(taskListArr);
 
   return (
@@ -14,8 +23,9 @@ function App() {
       <section>
         <h1>Assessment #2 - The Todo List</h1>
         <SubmitTask />
-        {/* Use your React skills to generate the todoList from here using
-        the code that already exists. */}
+      </section>
+      <section>
+      {/* <ToDoList /> */}
       </section>
     </div>
   );
